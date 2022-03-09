@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
 }
 
