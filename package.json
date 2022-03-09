@@ -6,7 +6,7 @@
     "rollup": "rimraf ./dist/* && rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs"
   },
   "keywords": [],
   "author": "Joaquim Neto",
