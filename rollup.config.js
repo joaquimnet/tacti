@@ -27,7 +27,9 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss(),
-      copy({ src: 'src/styles/tacti.global.css', dest: 'dist/tacti.global.css' }),
+      copy({
+        targets: [{ src: 'src/styles/tacti.global.css', dest: 'dist/css' }],
+      }),
     ],
   },
   {
