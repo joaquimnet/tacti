@@ -8,8 +8,8 @@ import classNames from 'classnames';
 export interface ButtonProps {
   label: string;
   size?: 'small' | 'medium' | 'large';
-  color: string;
-  style: React.CSSProperties;
+  color?: string;
+  style?: React.CSSProperties;
   onClick?: () => void;
 }
 
