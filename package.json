@@ -1,6 +1,6 @@
 {
   "name": "tacti",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A react component library for building user interfaces.",
   "scripts": {
     "rollup": "rimraf ./dist/* && rollup -c",
