@@ -1,0 +1,38 @@
+.tacti-list {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border-radius: 0.25rem;
+  list-style: none;
+}
+
+.tacti-list--border {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tacti-list-item {
+  height: 100%;
+  min-height: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.tacti-list--border .tacti-list-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tacti-list-item:last-child {
+  border-bottom: none;
+}
+
+.tacti-list--hover .tacti-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
