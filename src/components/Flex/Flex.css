@@ -1,0 +1,82 @@
+.tacti-Flex {
+  display: Flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tacti-Flex--justify-justifyCenter {
+  justify-content: center;
+}
+
+.tacti-Flex--justify-justifyBetween {
+  justify-content: space-between;
+}
+
+.tacti-Flex--justify-justifyAround {
+  justify-content: space-around;
+}
+
+.tacti-Flex--justify-justifyEvenly {
+  justify-content: space-evenly;
+}
+
+.tacti-Flex--justify-justifyStart {
+  justify-content: flex-start;
+}
+
+.tacti-Flex--justify-justifyEnd {
+  justify-content: flex-end;
+}
+
+.tacti-Flex--align-alignCenter {
+  align-items: center;
+}
+
+.tacti-Flex--align-alignBaseline {
+  align-items: baseline;
+}
+
+.tacti-Flex--align-alignStretch {
+  align-items: stretch;
+}
+
+.tacti-Flex--align-alignStart {
+  align-items: flex-start;
+}
+
+.tacti-Flex--align-alignEnd {
+  align-items: flex-end;
+}
+
+.tacti-Flex--wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.tacti-Flex--wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.tacti-Flex--wrap-wrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.tacti-Flex--wrap-wrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.tacti-Flex--direction-column {
+  flex-direction: column;
+}
+
+.tacti-Flex--direction-row {
+  flex-direction: row;
+}
+
+.tacti-Flex--direction-columnReverse {
+  flex-direction: column-reverse;
+}
+
+.tacti-Flex--direction-rowReverse {
+  flex-direction: row-reverse;
+}
