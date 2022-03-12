@@ -3,7 +3,9 @@
   "version": "0.0.6",
   "description": "A react component library for building user interfaces.",
   "scripts": {
+    "add": "hygen component new",
     "rollup": "rimraf ./dist/* && rollup -c",
+    "build": "npm run rollup",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
@@ -41,8 +43,13 @@
     "@testing-library/react": "^12.1.4",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.40",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.11.0",
+    "eslint-plugin-react": "^7.29.3",
+    "hygen": "^6.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "rimraf": "^3.0.2",
@@ -50,6 +57,7 @@
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-dts": "^4.2.0",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.6.2"
   }
 }

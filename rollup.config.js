@@ -4,6 +4,7 @@ import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import { terser } from 'rollup-plugin-terser';
 
 const packageJson = require('./package.json');
 
@@ -27,6 +28,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss(),
+      terser(),
       copy({
         targets: [{ src: 'src/styles/tacti.global.css', dest: 'dist/css' }],
       }),
