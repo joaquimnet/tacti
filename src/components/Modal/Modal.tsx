@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { tacti } from '../../util/tacti';
+import { DefaultProps } from '../../util/make-component';
 import './Modal.css';
 
-export interface ButtonProps {
+export interface ButtonProps extends DefaultProps {
   open: boolean;
-  onClose: () => void;
-  style?: React.CSSProperties;
+  onClose?: () => void;
 }
 
-const Modal: React.FC<ButtonProps> = ({ style = {}, open, onClose = () => {}, children }) => {
-  const [isClosing, setIsClosing] = useState(false);
+const Modal: React.FC<ButtonProps> = ({ style = {}, open, onClose, children }) => {
   const backdropClickHandler = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
-      setIsClosing(true);
-      setTimeout(onClose, 100);
+      onClose?.();
     }
   };
   if (!open) {
@@ -31,6 +29,9 @@ const Modal: React.FC<ButtonProps> = ({ style = {}, open, onClose = () => {}, ch
   );
 };
 
-Modal.propTypes = {};
+Modal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func,
+};
 
 export default Modal;
