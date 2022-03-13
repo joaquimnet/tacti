@@ -6,6 +6,8 @@ export interface DefaultProps
   component?: string | FC;
 }
 
+// TODO: forward refs
+
 export function makeComponent<T>(component: any): FC<DefaultProps & T> {
   const Component = component ? component : ('div' as any);
   return Component as FC<DefaultProps & T>;
