@@ -6,6 +6,6 @@
 
 .tacti-progress-bar-fill {
   height: 24px;
-  background: color;
+  background: white;
   transition: width ease-out 0.5s;
 }
