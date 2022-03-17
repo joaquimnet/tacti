@@ -7,8 +7,12 @@ export interface DefaultProps
 }
 
 // TODO: forward refs
-
-export function makeComponent<T>(component: any): FC<DefaultProps & T> {
-  const Component = component ? component : ('div' as any);
+/**
+ * This function will give the correct types to the component it is wrapping.
+ * @param component Component to wrap
+ * @returns
+ */
+export function makeComponent<T>(component: any, defaultComponent: DefaultProps['component'] = 'div'): FC<DefaultProps & T> {
+  const Component = component ? component : defaultComponent;
   return Component as FC<DefaultProps & T>;
 }
