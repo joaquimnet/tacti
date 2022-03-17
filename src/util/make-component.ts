@@ -3,7 +3,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface DefaultProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  component?: string | FC;
+  component?: keyof React.ReactDOM | React.ComponentType;
 }
 
 // TODO: forward refs
