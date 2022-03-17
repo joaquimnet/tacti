@@ -8,16 +8,23 @@ import './Box.css';
 
 export interface BoxProps extends DefaultProps {
   /** The strength of the shadow on the box. */
-  height?: 1 | 2 | 3 | 4;
+  height?: 0 | 1 | 2 | 3 | 4;
+  /** The size of the border radius on the box. */
+  borderSize?: 0 | 1 | 2 | 3 | 4;
 }
 
-const Box: React.FC<BoxProps> = ({ children, component, className, height, ...otherProps }) => {
+const Box: React.FC<BoxProps> = ({
+  children,
+  component,
+  className,
+  height,
+  borderSize,
+  ...otherProps
+}) => {
   const Component = makeComponent(component);
   const classes = classnames(tacti('Box'), className, {
-    [tacti(`Box--height-1`)]: height === 1,
-    [tacti(`Box--height-2`)]: height === 2,
-    [tacti(`Box--height-3`)]: height === 3,
-    [tacti(`Box--height-4`)]: height === 4,
+    [tacti(`Box--height-${height}`)]: true,
+    [tacti(`Box--borderSize-${borderSize}`)]: true,
   });
   return (
     <Component className={classes} {...otherProps}>
@@ -27,11 +34,13 @@ const Box: React.FC<BoxProps> = ({ children, component, className, height, ...ot
 };
 
 Box.propTypes = {
-  height: PropTypes.oneOf([1, 2, 3, 4]),
+  height: PropTypes.oneOf([0, 1, 2, 3, 4]),
+  borderSize: PropTypes.oneOf([0, 1, 2, 3, 4]),
 };
 
 Box.defaultProps = {
   height: 2,
+  borderSize: 2,
 };
 
 export default Box;
