@@ -80,3 +80,11 @@
 .tacti-Flex--direction-rowReverse {
   flex-direction: row-reverse;
 }
+
+.tacti-Flex--w100 {
+  width: 100%;
+}
+
+.tacti-Flex--h100 {
+  height: 100%;
+}

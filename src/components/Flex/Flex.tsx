@@ -11,6 +11,8 @@ export interface FlexProps extends DefaultProps {
   align?: 'start' | 'end' | 'center' | 'baseline' | 'stretch';
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+  w100?: boolean;
+  h100?: boolean;
 }
 
 const Flex: React.FC<FlexProps> = ({
@@ -21,6 +23,8 @@ const Flex: React.FC<FlexProps> = ({
   align,
   wrap,
   direction,
+  w100,
+  h100,
   ...otherProps
 }) => {
   const Component = makeComponent(component);
@@ -43,6 +47,8 @@ const Flex: React.FC<FlexProps> = ({
     [tacti(`Flex--direction-rowReverse`)]: direction === 'row-reverse',
     [tacti(`Flex--direction-column`)]: direction === 'column',
     [tacti(`Flex--direction-columnReverse`)]: direction === 'column-reverse',
+    [tacti(`Flex--w100`)]: w100,
+    [tacti(`Flex--h100`)]: h100,
   });
   return (
     <Component className={classes} {...otherProps}>
@@ -56,6 +62,8 @@ Flex.propTypes = {
   align: PropTypes.oneOf(['start', 'end', 'center', 'baseline', 'stretch']),
   wrap: PropTypes.oneOf(['wrap', 'nowrap', 'wrap-reverse']),
   direction: PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+  w100: PropTypes.bool,
+  h100: PropTypes.bool,
 };
 
 Flex.defaultProps = {

@@ -6,7 +6,7 @@ import Flex from './Flex';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Tacti/Flex',
+  title: 'Tacti/Primitives/Flex',
   component: Flex,
 } as ComponentMeta<typeof Flex>;
 
@@ -17,17 +17,15 @@ const Square = ({ color }: any) => (
   <div style={{ width: '24px', height: '24px', margin: '16px', backgroundColor: color }} />
 );
 
-export const Alignments = Template.bind({});
+export const FlexComponent = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Alignments.args = {
+FlexComponent.args = {
   wrap: 'wrap',
   justify: 'center',
   direction: 'row',
   align: 'center',
-  style: {
-    width: '100%',
-    height: '100%',
-  },
+  w100: true,
+  h100: true,
   children: (
     <>
       <Square color='red' />
