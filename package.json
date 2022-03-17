@@ -1,6 +1,6 @@
 {
   "name": "tacti",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A react component library for building user interfaces.",
   "scripts": {
     "add": "hygen component new",
