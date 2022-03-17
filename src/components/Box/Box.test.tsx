@@ -5,6 +5,6 @@ import Box from './Box';
 
 describe('Box', () => {
   test('renders the Box component', () => {
-    render(<Box label='Hello world!' />);
+    render(<Box>I&apos;m a Box!</Box>);
   });
 });
