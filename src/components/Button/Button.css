@@ -1,4 +1,4 @@
-.tacti-button {
+.tacti-Button {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -17,23 +17,23 @@
   border: none;
 }
 
-.tacti-button:hover {
+.tacti-Button:hover {
   filter: brightness(1.2);
 }
 
-.tacti-button:active {
+.tacti-Button:active {
   filter: brightness(0.8);
 }
 
-.tacti-button-small {
+.tacti-Button--size-small {
   font-size: 1rem;
   padding: 0.2em 0.5em;
 }
-.tacti-button-medium {
+.tacti-Button--size-medium {
   font-size: 1.2rem;
   padding: 0.3em 0.6em;
 }
-.tacti-button-large {
+.tacti-Button--size-large {
   font-size: 1.5rem;
   padding: 0.5em 1em;
 }

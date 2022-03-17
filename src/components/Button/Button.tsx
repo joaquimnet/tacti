@@ -1,38 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import { tacti } from '../../util/tacti';
+import { DefaultProps, makeComponent } from '../../util/make-component';
 import './Button.css';
-import classNames from 'classnames';
 
-export interface ButtonProps {
+export interface ButtonProps extends DefaultProps {
   label: string;
   size?: 'small' | 'medium' | 'large';
   color?: string;
-  style?: React.CSSProperties;
-  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
   label,
-  size = 'medium',
-  color = '#4791ce',
+  size,
+  color,
+  className,
+  component,
   style = {},
-  onClick = () => {},
+  ...otherProps
 }) => {
+  const Component = makeComponent(component, 'button');
+  const classes = classnames(tacti('Button'), className, {
+    [tacti(`Button--size-${size}`)]: true,
+  });
+  // @ts-expect-error This is okay.
+  const content = Component === 'input' ? { value: label } : { children: label };
   return (
-    <button
-      onClick={onClick}
+    <Component
+      className={classes}
       style={{ ...style, background: color }}
-      className={classNames(tacti('button'), tacti(`button-${size}`))}
+      {...content}
+      {...otherProps}
     >
       {label}
-    </button>
+    </Component>
   );
 };
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  color: PropTypes.string,
+  className: PropTypes.string,
+};
+
+Button.defaultProps = {
+  size: 'medium',
+  color: '#4791ce',
 };
 
 export default Button;
