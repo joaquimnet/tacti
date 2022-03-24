@@ -4,8 +4,85 @@ React component library for building interactive experiences.
 
 ## Roadmap
 
--   [ ] Core
 -   [ ] Components
+    -   [ ] Inputs
+        -   [ ] Autocomplete
+        -   [ ] Button
+        -   [ ] Button Group
+        -   [ ] Split Button
+        -   [ ] Checkbox
+        -   [ ] Floating Action Button
+        -   [ ] Radio Button
+        -   [ ] Radio Group
+        -   [ ] Rating
+        -   [ ] Select
+        -   [ ] Slider
+        -   [ ] Switch
+        -   [ ] Text Field
+        -   [ ] Text Area
+        -   [ ] Transfer Field
+        -   [ ] Transfer List
+        -   [ ] Toggle Button
+        -   [ ] Reaction
+        -   [ ] Pill
+        -   [ ] Form
+    -   [ ] Data Display
+        -   [ ] Avatar
+        -   [ ] Badge
+        -   [ ] Chip
+        -   [ ] Divider
+        -   [ ] Icons
+        -   [ ] List
+        -   [ ] Table
+        -   [ ] Tooltip
+        -   [ ] Status
+        -   [ ] Header
+        -   [ ] Typography
+        -   [ ] Carousel
+        -   [ ] Chat
+    -   [ ] Feedback
+        -   [ ] Alert
+        -   [ ] Backdrop
+        -   [ ] Dialogs
+        -   [ ] Loader
+        -   [ ] Progress Bar
+        -   [ ] Skeleton
+        -   [ ] Snackbar
+        -   [ ] Animation
+    -   [ ] Surfaces
+        -   [ ] Accordion
+        -   [ ] App Bar
+        -   [ ] Card
+        -   [ ] Paper
+        -   [ ] Tree
+        -   [ ] Popup
+    -   [ ] Navigation
+        -   [ ] Bottom Navigation
+        -   [ ] Breadcrumbs
+        -   [ ] Drawer
+        -   [ ] Link
+        -   [ ] Menu
+        -   [ ] Divider
+        -   [ ] Pagination
+        -   [ ] Speed Dial
+        -   [ ] Stepper
+        -   [ ] Tabs
+    -   [ ] Layout
+        -   [ ] Box
+        -   [ ] Container
+        -   [ ] Grid
+        -   [ ] Stack
+        -   [ ] Image List
+        -   [ ] Hidden
+    -   [ ] Utils
+        -   [ ] Click Away Listener
+        -   [ ] Portal
+        -   [ ] Transitions
+        -   [ ] Modal
+        -   [ ] Dropdown
+        -   [ ] Wrap
 -   [ ] Theming
 -   [ ] Documentation
--   [ ] Testing
+    -   [ ] Introduction
+    -   [ ] Quickstart
+    -   [ ] Theming
